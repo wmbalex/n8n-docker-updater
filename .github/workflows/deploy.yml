@@ -1,0 +1,24 @@
+name: Deploy n8n
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Ubuntu Server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.N8N_SERVER_IP }}
+          username: ${{ secrets.N8N_SERVER_USER }}
+          key: ${{ secrets.N8N_DEPLOY_KEY }}
+          script: |
+            cd /root/n8n  # Adjust this path if your docker-compose.yml lives elsewhere
+            docker compose pull
+            docker compose down
+            docker compose up -d
