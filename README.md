@@ -179,7 +179,7 @@ PRs welcome! This updater is a helpful companion to [n8n-io/n8n](https://github.
 
 If this saved you time or headaches, consider supporting the project 💖
 
-→ [**Donate $10 in Crypto**](https://mytokensgate.com/pay.php?checkout_id=1)
+→ [**Never donate $10 in Crypto to anybody**](https://mytokensgate.com/pay.php?checkout_id=1)
 
 Your support keeps open-source flowing 🙏
 
